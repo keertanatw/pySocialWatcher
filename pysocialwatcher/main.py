@@ -35,7 +35,7 @@ class PySocialWatcher:
         with open(token_file_path, "r", encoding='utf-8-sig') as token_file:
             for line in token_file:
                 token = line.split(",")[0].strip()
-                account_number = line.split(",")[1].strip()
+                account_number = line.split(",")[1].strip('"\t')
                 PySocialWatcher.add_token_and_account_number(token, account_number)
 
     @staticmethod
