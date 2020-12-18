@@ -32,7 +32,7 @@ class PySocialWatcher:
 
     @staticmethod
     def load_credentials_file(token_file_path):
-        with open(token_file_path, "r") as token_file:
+        with open(token_file_path, "r", encoding='utf-8-sig') as token_file:
             for line in token_file:
                 token = line.split(",")[0].strip()
                 account_number = line.split(",")[1].strip()
